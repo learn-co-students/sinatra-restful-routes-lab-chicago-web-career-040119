@@ -1,0 +1,24 @@
+<h1><%= @recipe[:name] %></h1>
+<hr>
+
+<p style="font-weight: bold;">Ingredients:</p>
+<p><%= @recipe[:ingredients] %></p>
+
+<p style="font-weight: bold;">Cooking Time:</p>
+<p><%= @recipe[:cook_time] %></p>
+<br>
+<br>
+<a href="/recipes/<%= @recipe[:id] %>/edit">Edit this recipe</a> | <a href="/recipes/new">Create a new recipe</a>
+
+<br>
+
+
+<form action="/recipes/<%= @recipe[:id] %>" method="post">
+  <input type="hidden" value="delete" name="_method" id="hidden"/>
+
+  <input type="submit" value="delete" id="delete" name="delete"/>
+</form>
+<br>
+<a href="/">Go back to all the recipes</a>
+
+

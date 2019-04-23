@@ -1,0 +1,15 @@
+<h1>The recipes</h1>
+  <br>
+  <br>
+  <br>
+  <hr>
+
+<% @recipes.each do |recipe| %>
+  <a href="/recipes/<%= recipe[:id]%>"><h2><%= recipe[:name]%></h2></a>
+  <p style="font-weight: bold;">Ingredients:</p>
+  <p><%= recipe[:ingredients] %></p>
+  <p style="font-weight: bold;">Cooking Time:</p>
+  <p><%= recipe[:cook_time] %></p>
+  <hr>
+  <br>
+<% end %>
